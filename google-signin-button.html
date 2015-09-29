@@ -95,13 +95,13 @@ Example:
 
    <span hidden$="{{signedIn}}">
 
-    <paper-button class="google-signin" on-click="clickHandler" ></paper-button>
+    <paper-button class="google-signin" on-click="_clickHandler" ></paper-button>
 
   </span>  
 
    <span hidden$="{{!signedIn}}">
 
-    <paper-button class="signout" on-click="clickHandler">Sign Out</paper-button>
+    <paper-button raised class="signout" on-click="_clickHandler">Sign Out</paper-button>
 
    </span>
 
@@ -117,7 +117,10 @@ Example:
       is: 'google-signin-button',
 
       properties: {
-
+        
+        /**
+         * Property that states if the user is signed in
+         */ 
         signedIn: {
 
           type: Boolean,
@@ -126,8 +129,11 @@ Example:
         }
 
       },  
-
-      clickHandler: function () {
+      
+      /**
+       * Execyted wgeb the button is clicked
+       */ 
+      _clickHandler: function () {
 
         this.fire( 'google-button-clicked', { 'signedIn': !this.signedIn } );
 
