@@ -1,6 +1,6 @@
 {
   "name": "google-signin-button",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     "Anonymous <anonymous@example.com>"
   ],
@@ -8,7 +8,8 @@
   "keywords": [
     "web-component",
     "polymer",
-    "seed"
+    "seed",
+    "web-components"
   ],
   "main": "google-signin-button.html",
   "license": "http://polymer.github.io/LICENSE.txt",
